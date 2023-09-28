@@ -7,6 +7,7 @@ import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { BACKGROUND_URL, PHOTO_URL } from '../utils/constants';
+import Footer from './Footer';
 
 
 const Login = () => {
@@ -74,10 +75,11 @@ const dispatch = useDispatch();
 
   
   return (
-    <div >
+    <>
     <Header/>
     <div className="absolute w-full h-full   ">
-        <img className=" w-full h-full object-cover sm:object-cover md:object-cover  " alt="netflix-bg" src={BACKGROUND_URL}/>
+    <img className="w-full h-full md:w-auto md:h-auto object-cover md:object-cover" alt="netflix-bg" src={BACKGROUND_URL}/>
+
     </div>
     <form onSubmit={(e) => e.preventDefault()} className='p-12 absolute w-10/12 md:w-4/12 bg-black mx-auto right-0 left-0 text-white my-32 bg-opacity-80 rounded-md'>
       <h1 className='font-bold text-3xl py-4 '>{isSignInForm? "Sign In" : "Sign Up" } </h1>
@@ -89,7 +91,8 @@ const dispatch = useDispatch();
       <button className='p-4 my-6 bg-[#e50914] w-full rounded-md font-bold text-md' onClick={handleButtonClick}>{isSignInForm? "Sign In" : "Sign Up" }</button>
       <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>{isSignInForm? "New to Netflix? Sign Up Now" : "Already a User? Sign In" }</p>
     </form>
-</div>
+    
+</>
    
  
    
