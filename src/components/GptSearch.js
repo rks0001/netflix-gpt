@@ -1,7 +1,5 @@
 import React from 'react'
-import GptSearchBar from './GptSearchBar'
 import GptMovieSuggestions from './GptMovieSuggestions'
-import {BACKGROUND_URL} from '../utils/constants'
 import NormalSearch from './NormalSearch'
 import { useSelector } from 'react-redux'
 const GptSearch = () => {

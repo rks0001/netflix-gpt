@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import MovieList from './MovieList';
+
 import MovieCard from './MovieCard';
-import img1 from '../images/profile.jpeg';
+
 
 const GptMovieSuggestions = () => {
   const suggestions = useSelector(store => store.gpt.gptMovies);

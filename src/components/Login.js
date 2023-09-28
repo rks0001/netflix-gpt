@@ -7,7 +7,7 @@ import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { BACKGROUND_URL, PHOTO_URL } from '../utils/constants';
-import Footer from './Footer';
+
 
 
 const Login = () => {
@@ -59,6 +59,7 @@ const dispatch = useDispatch();
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
+    console.log(user);
    
   })
   .catch((error) => {
