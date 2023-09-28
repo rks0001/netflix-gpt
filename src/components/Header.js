@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser, removeUser } from '../utils/userSlice'
 import { toggleGptSearchView } from '../utils/gptSlice'
-import { SUPPORTED_LANGUAGES } from '../utils/constants'
-import { changeLanguage } from '../utils/configSlice'
+
+
 import nlogo2 from '../images/Nlogo.png'
 
 const Header = () => {
@@ -68,10 +68,7 @@ const Header = () => {
 
   }
 
-  const handleLanguageChange = (e)=>{ 
-    dispatch(changeLanguage(e.target.value))
-  }
-
+ 
   const checkScreenSize = () => {
     setSmallScreen(window.innerWidth <768); 
   }
@@ -96,8 +93,7 @@ const Header = () => {
       {user && <>
       
         <div className=' flex  flex-row text-xl text-white font-bold' > 
-        <div> {showGptSearch && <select className='  px-4 py-2 bg-gray-900 text-white m-2 rounded-lg' onChange={handleLanguageChange}>
-    {SUPPORTED_LANGUAGES.map((lang)=>( <option className='text-sm md:text-lg' key={lang.identifier} value={lang.identifier}>{lang.name}</option>))}</select>}</div> 
+     
 
     <div className=' cursor-pointer flex flex-col ' onClick={() => handleDrop()}>
       <img className='w-10 m-2 justify-end ml-auto' alt="profile" src={user.photoURL}/> 
