@@ -75,21 +75,21 @@ const dispatch = useDispatch();
   
   return (
     <div >
-       <Header/>
-       <div className="absolute w-screen h-screen  ">
-           <img className="w-screen h-screen object-cover md:object-fill" alt="netflix-bg" src={BACKGROUND_URL}/>
-       </div>
-       <form onSubmit={(e) => e.preventDefault()} className='p-12 absolute w-10/12 md:w-4/12 bg-black mx-auto right-0 left-0 text-white my-36 bg-opacity-80 rounded-md'>
-         <h1 className='font-bold text-3xl py-4 '>{isSignInForm? "Sign In" : "Sign Up" } </h1>
+    <Header/>
+    <div className="absolute w-full h-full   ">
+        <img className=" w-full h-full object-cover sm:object-cover md:object-cover  " alt="netflix-bg" src={BACKGROUND_URL}/>
+    </div>
+    <form onSubmit={(e) => e.preventDefault()} className='p-12 absolute w-10/12 md:w-4/12 bg-black mx-auto right-0 left-0 text-white my-32 bg-opacity-80 rounded-md'>
+      <h1 className='font-bold text-3xl py-4 '>{isSignInForm? "Sign In" : "Sign Up" } </h1>
 {!isSignInForm &&  <input ref={name} type="text" placeholder='Full Name' className='p-4 my-4 w-full bg-[#333] rounded-md'/>}
 
-         <input ref={email} type="text" placeholder='Email Address' className='p-4 my-4 w-full bg-[#333] rounded-md'/>
-         <input ref={password} type="password" placeholder='Password' className='p-4 my-4 w-full bg-[#333] rounded-md'/>
-         <p className='text-red-500 font-bold text-md'>{errorMessage}</p>
-         <button className='p-4 my-6 bg-[#e50914] w-full rounded-md font-bold text-md' onClick={handleButtonClick}>{isSignInForm? "Sign In" : "Sign Up" }</button>
-         <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>{isSignInForm? "New to Netflix? Sign Up Now" : "Already a User? Sign In" }</p>
-       </form>
-   </div>
+      <input ref={email} type="text" placeholder='Email Address' className='p-4 my-4 w-full bg-[#333] rounded-md'/>
+      <input ref={password} type="password" placeholder='Password' className='p-4 my-4 w-full bg-[#333] rounded-md'/>
+      <p className='text-red-500 font-bold text-md'>{errorMessage}</p>
+      <button className='p-4 my-6 bg-[#e50914] w-full rounded-md font-bold text-md' onClick={handleButtonClick}>{isSignInForm? "Sign In" : "Sign Up" }</button>
+      <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>{isSignInForm? "New to Netflix? Sign Up Now" : "Already a User? Sign In" }</p>
+    </form>
+</div>
    
  
    
