@@ -76,10 +76,10 @@ const dispatch = useDispatch();
   return (
     <div >
        <Header/>
-       <div className="absolute w-full h-full  ">
-           <img className="w-full h-full bg-cover md:bg-contain" alt="netflix-bg" src={BACKGROUND_URL}/>
+       <div className="absolute w-screen h-screen  ">
+           <img className="w-screen h-screen object-cover md:object-fill" alt="netflix-bg" src={BACKGROUND_URL}/>
        </div>
-       <form onSubmit={(e) => e.preventDefault()} className='p-12 absolute w-4/12 bg-black mx-auto right-0 left-0 text-white my-36 bg-opacity-80 rounded-md'>
+       <form onSubmit={(e) => e.preventDefault()} className='p-12 absolute w-10/12 md:w-4/12 bg-black mx-auto right-0 left-0 text-white my-36 bg-opacity-80 rounded-md'>
          <h1 className='font-bold text-3xl py-4 '>{isSignInForm? "Sign In" : "Sign Up" } </h1>
 {!isSignInForm &&  <input ref={name} type="text" placeholder='Full Name' className='p-4 my-4 w-full bg-[#333] rounded-md'/>}
 
