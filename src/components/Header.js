@@ -34,7 +34,7 @@ const Header = () => {
     });
     
   }
-// eslint-disable-next-line
+
   useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -58,6 +58,7 @@ const Header = () => {
     return () =>{
       return () => unsubscribe();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 
