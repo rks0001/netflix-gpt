@@ -34,7 +34,7 @@ const Header = () => {
     });
     
   }
-
+// eslint-disable-next-line
   useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {

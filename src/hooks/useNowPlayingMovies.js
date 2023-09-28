@@ -18,7 +18,7 @@ const useNowPlayingMovies = () =>{
   
       
     }
-  
+  // eslint-disable-next-line
     useEffect(()=>{
     !nowPlayingMovies && getNowPlayingMovies(); 
     }, [])

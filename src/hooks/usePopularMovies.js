@@ -19,7 +19,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?page=1', API_OPTIONS);
   
       
     }
-  
+  // eslint-disable-next-line
     useEffect(()=>{
   !popularMovies && getPopularMovies(); 
     }, [])
